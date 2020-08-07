@@ -2,7 +2,7 @@ name: Scheduled Auto Merge From Develop To Staging
 
 on:
   schedule:
-    - cron: '30 12 * * 5'
+    - cron: '15 * * * *'
 
 jobs:
   sync-branch:
