@@ -1,8 +1,6 @@
 name: git command test
 
-on:
-  schedule:
-    - cron: '15 12 * * 5'
+on: push
 
 jobs:
   chk-branch:
