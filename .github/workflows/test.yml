@@ -1,8 +1,8 @@
-name: Scheduled Auto Merge From Develop To Staging
+name: git command test
 
 on:
   schedule:
-    - cron: '5 12 * * 5'
+    - cron: '15 12 * * 5'
 
 jobs:
   chk-branch:
