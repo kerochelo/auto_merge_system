@@ -2,12 +2,18 @@ name: Scheduled build
 
 on:
   schedule:
-    - cron: '30 7 * * *'
+    - cron: '10 8 * * *'
 
 jobs:
-  chk-branch:
+  sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: git status
-      - run: git branch
+      - uses: actions/checkout@master
+
+      - name: Merge development -> staging
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          from_branch: development
+          target_branch: staging
+          github_token: ${{ secrets.GITHUB_TOKEN }}
