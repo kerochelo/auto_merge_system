@@ -1,8 +1,8 @@
-name: Scheduled build
+name: Auto Merge From Develop To Staging
 
 on:
   schedule:
-    - cron: '10 8 * * *'
+    - cron: '30 * * * *'
 
 jobs:
   sync-branch:
