@@ -16,4 +16,4 @@ jobs:
           type: now
           from_branch: development
           target_branch: staging
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUBACTIONSTOKEN }}
