@@ -1,0 +1,19 @@
+name: Auto Merge From Develop To Staging
+
+on:
+  schedule:
+    - cron: '10 * * * *'
+
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge develop -> staging
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          head_to_merge: develop
+          target_branch: staging
+          github_token: ${{ github.token }}
