@@ -2,7 +2,7 @@ name: Auto Merge From Develop To Staging
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '50 * * * *'
 
 jobs:
   sync-branch:
@@ -16,4 +16,4 @@ jobs:
           type: now
           head_to_merge: development
           target_branch: staging
-          github_token: ${{ secrets.GITHUBACTIONSTOKEN }}
+          github_token: ${{ github.token }}
