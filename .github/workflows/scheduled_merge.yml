@@ -2,7 +2,7 @@ name: Auto Merge From Develop To Staging
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '10 * * * *'
 
 jobs:
   sync-branch:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge development -> staging
+      - name: Merge develop -> staging
         uses: devmasx/merge-branch@v1.3.0
         with:
           type: now
