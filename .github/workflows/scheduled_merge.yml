@@ -2,10 +2,10 @@ name: Auto Merge From Develop To Staging
 
 on:
   schedule:
-    - cron: '10 * * * *'
+    - cron: '50 * * * *'
 
 jobs:
-  sync-branch:
+  auto-merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
