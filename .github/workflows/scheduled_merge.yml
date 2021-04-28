@@ -8,10 +8,10 @@ jobs:
   sync-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
 
-      - name: Merge develop -> staging
-        uses: devmasx/merge-branch@v1.3.0
+      - name: merge from develop to staging
+        uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
           head_to_merge: develop
